@@ -1,7 +1,5 @@
 # lexty/hugo
 
-[Docker Hub](https://hub.docker.com/r/lexty/hugo/)
-
 ### Usage
 
     docker run --rm -v $(pwd):/data lexty/hugo <command>
