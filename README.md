@@ -1,5 +1,7 @@
 # lexty/hugo
 
+The [Hugo](https://gohugo.io/) image with [Pygments](http://pygments.org/).
+
 ### Usage
 
     docker run --rm -v $(pwd):/data lexty/hugo <command>
@@ -8,5 +10,4 @@
 
     docker run --rm lexty/hugo help
 
- - [lexty/hugo](https://hub.docker.com/r/lexty/hugo/)
- - [Hugo](https://gohugo.io/)
+[Image on Docker Hub](https://hub.docker.com/r/lexty/hugo/)
