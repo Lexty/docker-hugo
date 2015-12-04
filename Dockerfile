@@ -18,5 +18,6 @@ RUN mkdir /data && \
 ENV PATH $PATH:/opt/pygments
 VOLUME /data
 WORKDIR /data
+EXPOSE 1313
 
 ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
