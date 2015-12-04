@@ -29,12 +29,12 @@ build:
 	sed -i "s:COPY ./build/hugo_v[0-9.{} a-z]* /:COPY ./build/hugo_v$(HUGO_VERSION) /:gi" Dockerfile
 	sed -i "s:COPY ./build/pygments_v[0-9.{} a-z]* /:COPY ./build/pygments_v$(PYGMENTS_VERSION) /:gi" Dockerfile
 	docker build -t $(USER)/hugo:$(TAG) .
-	make clear-dockerfile
+	make clean-dockerfile
 
 clean-dockerfile:
 	sed -i 's/ENV HUGO_VERSION [0-9.{} a-z]*/ENV HUGO_VERSION {{ HUGO }}/gi' Dockerfile
 	sed -i 's:COPY ./build/hugo_v[0-9.{} a-z]* /:COPY ./build/hugo_v{{ HUGO }} /:gi' Dockerfile
 	sed -i 's:COPY ./build/pygments_v[0-9.{} a-z]* /:COPY ./build/pygments_v{{ PYGMENTS }} /:gi' Dockerfile
 
-clean: clear-dockerfile
+clean: clean-dockerfile
 	rm -rf build
